@@ -1,16 +1,19 @@
-# Vimium-C Theme Generator
+# 🎨 Vimium-C Theme Generator
 
 Generate custom Vimium-C CSS themes using your own color palettes.
 
-## Requirements
+## ✅ Requirements
 
 - **Ruby** (pre-installed on macOS and most Linux distributions)
-  - Check: `ruby --version`
-  - Install if needed: [rubyinstaller.org](https://rubyinstaller.org/) (Windows) or `brew install ruby` (macOS) or `sudo apt/dnf/pacman install ruby` (Linux)
+  - **Check:** `ruby --version`
+  - **Install if needed:**
+    - Windows: [rubyinstaller.org](https://rubyinstaller.org/)
+    - macOS: `brew install ruby`
+    - Linux: `sudo apt/dnf/pacman install ruby`
 
-## Usage
+## 🚀 Usage
 
-### Interactive Mode (Recommended)
+### 🤖 Interactive Mode (Recommended)
 
 ```bash
 ruby generate_theme.rb
@@ -25,7 +28,7 @@ You'll be prompted to select:
 > Each selection includes a final option to "Use a dark/light theme instead" to bypass the day/night recommendations.
 > (e.g., use dark themes for both day and night or vice-versa).
 
-### CLI Mode
+### ⌨️ CLI Mode
 
 ```bash
 ruby generate_theme.rb --day oasis_day --night oasis_lagoon
@@ -38,13 +41,13 @@ ruby generate_theme.rb --day oasis_day --night oasis_lagoon
 - `-l, --list` - List all available themes
 - `-h, --help` - Show help
 
-## Output
+## 📄 Output
 
 Generated CSS files are saved to `output/vimiumc-{night}-{day}.css`
 
 Example: `vimiumc-lagoon-day.css`
 
-## Importing into Vimium-C
+## 📥 Importing into Vimium-C
 
 1. Generate your theme using the steps above
 2. Copy the entire CSS content from the generated file
@@ -57,21 +60,19 @@ Example: `vimiumc-lagoon-day.css`
 > [!TIP]
 > The extension will automatically parse and apply all sections (HUD, Vomnibar, Find Mode).
 
-## Customizing the CSS Template
+## 🎨 Customizing the CSS Template
 
 Feel free to [edit the template here](./vimium-c.css.erb), it's just CSS.
 
-### Tips and Tricks
+### 💡 Tips and Tricks
 
 1. Use the [Vimium-C Wiki](https://github.com/gdh1995/vimium-c/wiki/Style-the-UI-of-Vimium-C-using-custom-CSS) to learn how CSS is applied in sections
 2. You can view the html and elements of `vimium-c` by running commands from the settings page of the extension and using your browser's inspect window
 3. Have fun!
 
-## Adding New/My Own Themes
+## ✨ Adding Your Own Themes
 
-Yes, you can extend this script to add new themes.
-
-You can even take it and use it yourself for your plugin (give me a shout out if you do, please and thank you).
+The example themes provided are from my [oasis neovim theme pack](https://github.com/uhs-robert/oasis.nvim). You can use them as a starting point of reference.
 
 1. Add a new `.json` theme file to [mappings](./mappings/) following the other files as a template (e.g., [oasis_lagoon](./mappings/oasis_lagoon.json))
 2. Update the [index.json](./mappings/index.json) to include your new theme file, categorize it as light or dark
