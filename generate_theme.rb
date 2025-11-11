@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# extras/vimium-c/generate_theme.rb
+# generate_theme.rb
 # frozen_string_literal: true
 
 require 'erb'
