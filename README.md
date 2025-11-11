@@ -1,6 +1,20 @@
-# 🎨 Vimium-C Theme Generator
+<p align="center">
+  <img
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3a8.svg"
+    width="128" height="128" alt="Oasis emoji" />
+</p>
+<h1 align="center">Vimium-C Theme Generator</h1>
 
-Generate custom Vimium-C CSS themes using your own color palettes.
+<p align="center">
+  <a href="https://github.com/uhs-robert/vimium-c-theme-generator/stargazers"><img src="https://img.shields.io/github/stars/uhs-robert/vimium-c-theme-generator?colorA=192330&colorB=skyblue&style=for-the-badge"></a>
+  <a href="https://github.com/uhs-robert/vimium-c-theme-generator/issues"><img src="https://img.shields.io/github/issues/uhs-robert/vimium-c-theme-generator?colorA=192330&colorB=khaki&style=for-the-badge"></a>
+  <a href="https://github.com/uhs-robert/vimium-c-theme-generator/contributors"><img src="https://img.shields.io/github/contributors/uhs-robert/vimium-c-theme-generator?colorA=192330&colorB=8FD1C7&style=for-the-badge"></a>
+  <a href="https://github.com/uhs-robert/vimium-c-theme-generator/network/members"><img src="https://img.shields.io/github/forks/uhs-robert/vimium-c-theme-generator?colorA=192330&colorB=C28EFF&style=for-the-badge"></a>
+</p>
+
+<p align="center">
+A simple Ruby-based CLI tool to generate custom CSS themes for the [Vimium-C browser extension](https://github.com/gdh1995/vimium-c).
+</p>
 
 ## ✅ Requirements
 
@@ -31,21 +45,24 @@ You'll be prompted to select:
 ### ⌨️ CLI Mode
 
 ```bash
-ruby generate_theme.rb --day oasis_day --night oasis_lagoon
+ruby generate_theme.rb --day <day_theme> --night <night_theme>
 ```
 
 **Options:**
 
-- `-d, --day THEME` - Day theme
-- `-n, --night THEME` - Night theme
+- `-d, --day THEME` - Day theme name
+- `-n, --night THEME` - Night theme name
 - `-l, --list` - List all available themes
 - `-h, --help` - Show help
+
+> [!TIP]
+> Run `ruby generate_theme.rb --list` to see all available theme names.
 
 ## 📄 Output
 
 Generated CSS files are saved to `output/vimiumc-{night}-{day}.css`
 
-Example: `vimiumc-lagoon-day.css`
+Example: If you select "lagoon" for night and "day" for day, the output will be `output/vimiumc-lagoon-day.css`
 
 ## 📥 Importing into Vimium-C
 
@@ -60,7 +77,7 @@ Example: `vimiumc-lagoon-day.css`
 > [!TIP]
 > The extension will automatically parse and apply all sections (HUD, Vomnibar, Find Mode).
 
-## 🎨 Customizing the CSS Template
+## ✏️ Customizing the CSS Template
 
 Feel free to [edit the template here](./vimium-c.css.erb), it's just CSS.
 
@@ -72,8 +89,69 @@ Feel free to [edit the template here](./vimium-c.css.erb), it's just CSS.
 
 ## ✨ Adding Your Own Themes
 
-The example themes provided are from my [oasis neovim theme pack](https://github.com/uhs-robert/oasis.nvim). You can use them as a starting point of reference.
+You can easily create custom themes by adding your own color palettes! The included themes are from the [oasis neovim theme pack](https://github.com/uhs-robert/oasis.nvim) and serve as great references.
 
-1. Add a new `.json` theme file to [mappings](./mappings/) following the other files as a template (e.g., [oasis_lagoon](./mappings/oasis_lagoon.json))
-2. Update the [index.json](./mappings/index.json) to include your new theme file, categorize it as light or dark
-3. Run the generator and use your new theme!
+### 📋 Steps to Add a Theme
+
+1. **Create a theme file**: Add a new `.json` file to the [mappings](./mappings/) directory
+   - Use any existing theme (e.g., [oasis_lagoon.json](./mappings/oasis_lagoon.json)) as a template
+   - Define all required color keys (see Color Key Reference below)
+   - Set `name`, `display_name`, and `is_light` metadata
+
+2. **Register the theme**: Update [index.json](./mappings/index.json)
+   - Add your theme to either `light_themes` or `dark_themes` array
+   - Include the `id` (filename without `.json`) and `name` (display name)
+
+3. **Use your theme**: Run the generator and your new theme will appear in the selection menu!
+
+### 📦 Theme File Structure
+
+```json
+{
+  "name": "my_theme",
+  "display_name": "My Custom Theme",
+  "is_light": false,
+  "bg_core": "#1a1b26",
+  "bg_mantle": "#16161e",
+  "bg_surface": "#24283b",
+  "fg": "#c0caf5",
+  "link": "#7aa2f7",
+  "border": "#3b4261",
+  "primary": "#bb9af7",
+  "hover_primary": "#c0aff7",
+  "secondary": "#7dcfff",
+  "title_match": "#ff9e64",
+  "link_match": "#f7768e"
+}
+```
+
+### 🔑 Color Key Reference
+
+**Background Hierarchy** (darkest → lightest for dark themes, lightest → darkest for light themes):
+
+- `bg_core` - Base background (deepest layer)
+- `bg_mantle` - Secondary background (middle layer)
+- `bg_surface` - Surface background (top layer, for elevated elements)
+
+**Foreground Colors**:
+
+- `fg` - Primary text color
+- `link` - Link text color
+- `border` - Border and divider color
+
+**Accent Colors**:
+
+- `primary` - Primary accent color
+- `hover_primary` - Hover color for primary accent
+- `secondary` - Secondary accent color
+
+**Match Highlighting**:
+
+- `title_match` - Color for matched text in titles
+- `link_match` - Color for matched text in links
+
+**Metadata**:
+
+- `name` - Internal theme identifier (e.g., "my_theme")
+- `display_name` - User-facing name (e.g., "My Custom Theme")
+- `is_light` - Boolean indicating if this is a light theme
